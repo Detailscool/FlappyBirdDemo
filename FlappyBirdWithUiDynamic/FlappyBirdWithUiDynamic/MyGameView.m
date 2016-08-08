@@ -9,7 +9,7 @@
 #import "MyGameView.h"
 #import "MyView.h"
 
-@interface MyGameView()<UIScrollViewDelegate>
+@interface MyGameView()
 
 @property (nonatomic,weak)UIScrollView * scrollView;
 

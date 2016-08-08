@@ -8,19 +8,12 @@
 
 #import <UIKit/UIKit.h>
 typedef enum{
-    
     MyImageUp,
     MyImageDown,
-    
 } MyImagePosition;
 
 @interface MyImage : UIImage
-
 @property (nonatomic,assign)CGFloat x;
-
 @property (nonatomic,assign)CGFloat y;
-
 @property (nonatomic,assign)MyImagePosition position;
-
-
 @end

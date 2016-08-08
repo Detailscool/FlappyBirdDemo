@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "MyGameView.h"
 
-@interface ViewController ()<UIScrollViewDelegate>
+@interface ViewController ()
 
 @end
 
@@ -17,10 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     MyGameView * gameView = [[MyGameView alloc]initWithFrame:self.view.bounds];
     [self.view addSubview:gameView];
-    
 }
 
 
