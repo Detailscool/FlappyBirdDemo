@@ -21,6 +21,7 @@
 @end
 
 @implementation MyView
+
 static int count = 0;
 static int collisionNum = 0;
 
@@ -30,11 +31,8 @@ static int collisionNum = 0;
     }
     
     for (int i = 0; i < self.images.count; i++) {
-        
         MyImage * img = self.images[i];
-        
         [img drawAtPoint:CGPointMake(img.x, img.y)];
-        
         img.x -= 4;
         
         if (img.x + img.size.width < 0) {
@@ -47,8 +45,6 @@ static int collisionNum = 0;
             collisionNum ++;
             self.score.text = [NSString stringWithFormat:@"你碰到了%d次",collisionNum];
         }
-        
-    
     }
     
     for (MyImage * img  in self.deletedImages) {
@@ -56,8 +52,6 @@ static int collisionNum = 0;
     }
     [self.deletedImages removeAllObjects];
 }
-
-
 
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
@@ -68,7 +62,6 @@ static int collisionNum = 0;
 }
 
 - (void)setup{
-    
     UIView * redView = [[UIView alloc]initWithFrame:CGRectMake(100, 100, 40, 40)];
     redView.backgroundColor = [UIColor redColor];
     self.redView = redView;
@@ -85,9 +78,12 @@ static int collisionNum = 0;
     item.density = 1.2;
     [self.animator addBehavior:item];
     
-    UILabel * score = [[UILabel alloc]initWithFrame:CGRectMake(600, 10, 200, 20)];
+    UILabel * score = [[UILabel alloc]init];
     self.score = score;
     [self addSubview:score];
+    score.translatesAutoresizingMaskIntoConstraints = NO;
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:score attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1 constant:20]];
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:score attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTrailing multiplier:1 constant:-20]];
     
     CADisplayLink * displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(loopPlay)];
     [displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
@@ -105,17 +101,12 @@ static int collisionNum = 0;
     [self.animator removeBehavior:self.push];
 }
 
-
 - (void)loopPlay{
-    
     if (self.images.count < 7) {
-        
         NSString * path = [[NSBundle mainBundle]pathForResource:@"1.png" ofType:nil];
         
         MyImage * img = [[MyImage alloc]initWithContentsOfFile:path];
-        
         img.position = arc4random_uniform(2);
-    
         NSInteger randomNUM = arc4random_uniform(100);
         
         if (img.position == MyImageUp) {
@@ -127,7 +118,6 @@ static int collisionNum = 0;
         
         img.x = self.bounds.size.width + count*100;
         count++;
-        
         [self.images addObject:img];
     }
     
@@ -135,7 +125,6 @@ static int collisionNum = 0;
 }
 
 #pragma mark - *****************懒加载*****************
-
 - (NSMutableArray *)deletedImages{
     if (!_deletedImages) {
         _deletedImages = [NSMutableArray array];
@@ -143,15 +132,12 @@ static int collisionNum = 0;
     return _deletedImages;
 }
 
-
-
 -(NSMutableArray *)images{
     if (!_images) {
         _images = [[NSMutableArray alloc]init];
     }
     return _images;
 }
-
 
 -(UIDynamicAnimator *)animator{
     if (!_animator) {

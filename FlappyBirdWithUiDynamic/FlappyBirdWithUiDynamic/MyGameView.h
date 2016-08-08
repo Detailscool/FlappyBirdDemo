@@ -1,13 +1,13 @@
 //
-//  MyScrollView.h
+//  MyGameView.h
 //  FlappyBirdWithUiDynamic
 //
-//  Created by Detailscool on 16/1/17.
+//  Created by HenryLee on 16/8/8.
 //  Copyright © 2016年 Detailscool. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface MyScrollView : UIScrollView
+@interface MyGameView : UIView
 
 @end

@@ -13,10 +13,10 @@
 		2E88E0121C4BBB9C003D9849 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E88E0101C4BBB9C003D9849 /* Main.storyboard */; };
 		2E88E0141C4BBB9C003D9849 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E88E0131C4BBB9C003D9849 /* Assets.xcassets */; };
 		2E88E0171C4BBB9C003D9849 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E88E0151C4BBB9C003D9849 /* LaunchScreen.storyboard */; };
-		2E88E0231C4BCE51003D9849 /* MyScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E88E0221C4BCE51003D9849 /* MyScrollView.m */; settings = {ASSET_TAGS = (); }; };
-		2E9F8E4F1C4D0A57007619BC /* MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F8E4E1C4D0A57007619BC /* MyView.m */; settings = {ASSET_TAGS = (); }; };
-		2E9F8E521C4D0D60007619BC /* MyImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F8E511C4D0D60007619BC /* MyImage.m */; settings = {ASSET_TAGS = (); }; };
-		2E9F8E541C4D0FAC007619BC /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E9F8E531C4D0FAC007619BC /* 1.png */; settings = {ASSET_TAGS = (); }; };
+		2E9F8E4F1C4D0A57007619BC /* MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F8E4E1C4D0A57007619BC /* MyView.m */; };
+		2E9F8E521C4D0D60007619BC /* MyImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F8E511C4D0D60007619BC /* MyImage.m */; };
+		2E9F8E541C4D0FAC007619BC /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E9F8E531C4D0FAC007619BC /* 1.png */; };
+		8DDABC5A1D58243800529F4A /* MyGameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DDABC591D58243800529F4A /* MyGameView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,13 +30,13 @@
 		2E88E0131C4BBB9C003D9849 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E88E0161C4BBB9C003D9849 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E88E0181C4BBB9C003D9849 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2E88E0211C4BCE51003D9849 /* MyScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyScrollView.h; sourceTree = "<group>"; };
-		2E88E0221C4BCE51003D9849 /* MyScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyScrollView.m; sourceTree = "<group>"; };
 		2E9F8E4D1C4D0A57007619BC /* MyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyView.h; sourceTree = "<group>"; };
 		2E9F8E4E1C4D0A57007619BC /* MyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyView.m; sourceTree = "<group>"; };
 		2E9F8E501C4D0D60007619BC /* MyImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyImage.h; sourceTree = "<group>"; };
 		2E9F8E511C4D0D60007619BC /* MyImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyImage.m; sourceTree = "<group>"; };
 		2E9F8E531C4D0FAC007619BC /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1.png; path = Assets.xcassets/1.imageset/1.png; sourceTree = "<group>"; };
+		8DDABC581D58243800529F4A /* MyGameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyGameView.h; sourceTree = "<group>"; };
+		8DDABC591D58243800529F4A /* MyGameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyGameView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,8 +73,8 @@
 				2E88E00B1C4BBB9C003D9849 /* AppDelegate.m */,
 				2E88E00D1C4BBB9C003D9849 /* ViewController.h */,
 				2E88E00E1C4BBB9C003D9849 /* ViewController.m */,
-				2E88E0211C4BCE51003D9849 /* MyScrollView.h */,
-				2E88E0221C4BCE51003D9849 /* MyScrollView.m */,
+				8DDABC581D58243800529F4A /* MyGameView.h */,
+				8DDABC591D58243800529F4A /* MyGameView.m */,
 				2E9F8E4D1C4D0A57007619BC /* MyView.h */,
 				2E9F8E4E1C4D0A57007619BC /* MyView.m */,
 				2E9F8E501C4D0D60007619BC /* MyImage.h */,
@@ -170,9 +170,9 @@
 			files = (
 				2E88E00F1C4BBB9C003D9849 /* ViewController.m in Sources */,
 				2E9F8E4F1C4D0A57007619BC /* MyView.m in Sources */,
-				2E88E0231C4BCE51003D9849 /* MyScrollView.m in Sources */,
 				2E9F8E521C4D0D60007619BC /* MyImage.m in Sources */,
 				2E88E00C1C4BBB9C003D9849 /* AppDelegate.m in Sources */,
+				8DDABC5A1D58243800529F4A /* MyGameView.m in Sources */,
 				2E88E0091C4BBB9C003D9849 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
